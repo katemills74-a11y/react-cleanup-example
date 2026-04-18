@@ -19,9 +19,10 @@ This project demonstrates my ability to take a messy, hard‑to‑maintain React
 ## 📁 Project Structure
 
 react-cleanup-example/
+|── before/
+│     └── MessyComponent.jsx   ← original messy version (before)
 ├── src/
-│     ├── MessyComponent.jsx   ← original messy version (before)
-│     ├── CleanComponent.jsx   ← cleaned version (after)
+│     ├── CounterInputCard.jsx   ← cleaned version (after)
 │     └── App.jsx
 └── README.md
 
@@ -36,9 +37,19 @@ Install dependencies:
 
 
 Start the dev server:
-
+Install dependencies:
+npm install
+Start the dev server:
+npm run dev
 
 Then open the local URL shown in the terminal to view the component in the browser.
+
+## 🛠 Tech Stack
+
+- React  
+- Vite  
+- JavaScript (ES6+)  
+- JSX  
 
 ---
 
@@ -54,7 +65,7 @@ Then open the local URL shown in the terminal to view the component in the brows
 - Repeated conditional patterns  
 - Props used without defaults or clarity  
 
-### After (CleanComponent.jsx)
+### After (CounterInputCard.jsx)
 - Extracted, reusable styling  
 - Simplified state and logic  
 - Clear naming and structure  
@@ -67,12 +78,25 @@ Then open the local URL shown in the terminal to view the component in the brows
 
 ## 📸 Suggested Screenshots for Portfolio
 
-Include these in your Contra / Fiverr / Upwork portfolio:
+- **Before screenshot:** messy code 
+![BCode](./screenshots/Before_Component_Logic.png)
+![BRender](./screenshots/Before_Render_Code.png)
+- **After screenshot:** cleaned code
+![ACode](./screenshots/After_Component_Logic.png)
+![ARender](./screenshots/After_Render_Code.png)
 
-- **Before screenshot:** messy UI  
-- **After screenshot:** cleaned UI  
-- **Code comparison:** before vs after snippets  
-- **Accessibility improvements:** label/input, focus states  
+- **Accessibility improvements:** label/input, focus states
+**Before:**  
+- Label not associated with input  
+- No `id` on the input  
+- Screen readers could not understand the form  
+- Dynamic message not announced 
+![BAccess](./screenshots/BeforeAccessibility.png)
+**After:**  
+- Added `id` + `htmlFor` to correctly link label and input  
+- Added `role="status"` so screen readers announce dynamic updates  
+- Improved keyboard and screen‑reader accessibility
+![AAccess](./screenshots/AfterAccessibility.png)
 
 These visuals help clients instantly understand the value you provide.
 
