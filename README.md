@@ -96,11 +96,14 @@ Then open the local URL shown in the terminal to view the component in the brows
 - No `id` on the input  
 - Screen readers could not understand the form  
 - Dynamic message not announced 
+
 ![BAccess](./screenshots/BeforeAccessibility.png)
+
 **After:**  
 - Added `id` + `htmlFor` to correctly link label and input  
 - Added `role="status"` so screen readers announce dynamic updates  
 - Improved keyboard and screen‑reader accessibility
+
 ![AAccess](./screenshots/AfterAccessibility.png)
 
 These visuals help clients instantly understand the value you provide.
