@@ -38,9 +38,9 @@ Install dependencies:
 
 Start the dev server:
 Install dependencies:
-npm install
+- npm install
 Start the dev server:
-npm run dev
+- npm run dev
 
 Then open the local URL shown in the terminal to view the component in the browser.
 
@@ -78,11 +78,16 @@ Then open the local URL shown in the terminal to view the component in the brows
 
 ## 📸 Suggested Screenshots for Portfolio
 
-- **Before screenshot:** messy code 
+- **Before screenshot:** messy component code 
 ![BCode](./screenshots/Before_Component_Logic.png)
+
+- **Before screenshot:** messy render code
 ![BRender](./screenshots/Before_Render_Code.png)
-- **After screenshot:** cleaned code
+
+- **After screenshot:** cleaned component code
 ![ACode](./screenshots/After_Component_Logic.png)
+
+- **After screenshot:** cleaned render code
 ![ARender](./screenshots/After_Render_Code.png)
 
 - **Accessibility improvements:** label/input, focus states
