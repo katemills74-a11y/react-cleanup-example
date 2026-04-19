@@ -11,7 +11,17 @@ export default function CounterInputCard({
 
 const [count,setCount] = useState(0)
 const [text,setText] = useState("")
-const {container, title: titleStyle, countText, button, inputWrapper, input, message, footer, footerText} = styles
+const {
+	container, 
+	title: titleStyle, 
+	countText, 
+	button, 
+	inputWrapper, 
+	input, 
+	message, 
+	footer, 
+	footerText
+	} = styles
 
 function handleClick() {
 	setCount(count+1)		
