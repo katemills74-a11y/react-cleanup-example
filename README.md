@@ -125,6 +125,11 @@ This example shows exactly the kind of high‑impact, fast‑turnaround improvem
 
 ---
 
+## Live Demo
+
+View the project here:
+https://katemills74-a11y.github.io/react-cleanup-example/
+
 ## 📬 Want Something Similar?
 
 If you need help cleaning up your React components, improving UI consistency, or fixing layout and accessibility issues, I can help.  
