@@ -76,7 +76,7 @@ Then open the local URL shown in the terminal to view the component in the brows
 
 ---
 
-## 📸 Suggested Screenshots for Portfolio
+## 📸 Screenshots
 
 - **Before screenshot:** messy component code 
 ![BCode](./screenshots/Before_Component_Logic.png)
