@@ -18,6 +18,7 @@ This project demonstrates my ability to take a messy, hard‑to‑maintain React
 
 ## 📁 Project Structure
 
+```
 react-cleanup-example/
 |── before/
 │     └── MessyComponent.jsx   ← original messy version (before)
@@ -25,7 +26,7 @@ react-cleanup-example/
 │     ├── CounterInputCard.jsx   ← cleaned version (after)
 │     └── App.jsx
 └── README.md
-
+```
 
 The **before** and **after** versions are kept separate so you can clearly see the improvements.
 
@@ -37,9 +38,13 @@ Install dependencies:
 
 
 Start the dev server:
+
 Install dependencies:
+
 - npm install
+
 Start the dev server:
+
 - npm run dev
 
 Then open the local URL shown in the terminal to view the component in the browser.
