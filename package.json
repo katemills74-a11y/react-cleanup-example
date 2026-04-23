@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
+    "lint": "eslint src --ext,.js,.jsx",
+    "lint:fix": "eslint src --ext .js,.jsx --fix",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
@@ -20,10 +21,19 @@
     "@types/react-dom": "^19.2.3",
     "@vitejs/plugin-react": "^6.0.1",
     "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-prettier": "^5.5.5",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "gh-pages": "^6.3.0",
     "globals": "^17.4.0",
+    "prettier": "^3.8.3",
+    "react-icons": "^5.6.0",
+    "react-markdown": "^10.1.0",
+    "react-router": "^7.14.2",
+    "react-router-dom": "^7.14.2",
     "vite": "^8.0.4"
   }
 }

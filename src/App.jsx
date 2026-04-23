@@ -1,8 +1,8 @@
-import React from "react"
+import React from 'react'
 import './App.css'
-import CounterInputCard from "./CounterInputCard"
+import CounterInputCard from './CounterInputCard'
 
-function App () {
+function App() {
   return (
     <div>
       <h1>React Cleanup Example</h1>

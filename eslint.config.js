@@ -1,29 +1,65 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import { defineConfig, globalIgnores } from 'eslint/config'
+// eslint.config.js
+import js from "@eslint/js";
+import react from "eslint-plugin-react";
+import reactHooks from "eslint-plugin-react-hooks";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+import prettier from "eslint-plugin-prettier";
+import prettierConfig from "eslint-config-prettier";
 
-export default defineConfig([
-  globalIgnores(['dist']),
+export default [
+  // 1. Ignore unwanted folders
   {
-    files: ['**/*.{js,jsx}'],
-    extends: [
-      js.configs.recommended,
-      reactHooks.configs.flat.recommended,
-      reactRefresh.configs.vite,
-    ],
+    ignores: ["dist/**", "node_modules/**", "public/**", "**/*.min.js"]
+  },
+
+  // 2. Explicitly limit linting to src/
+  {
+    files: ["src/**/*.js", "src/**/*.jsx"]
+  },
+
+  // 3. Base JS rules
+  js.configs.recommended,
+
+  // 4. React + Hooks + A11y + Prettier
+  {
+    files: ["src/**/*.js", "src/**/*.jsx"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      ecmaVersion: "latest",
+      sourceType: "module",
+      globals: {
+        window: "readonly",
+        document: "readonly",
+        prompt: "readonly",
+        crypto: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        navigator: "readonly",
+        alert: "readonly",
+        setTimeout: "readonly",
+      },
       parserOptions: {
-        ecmaVersion: 'latest',
         ecmaFeatures: { jsx: true },
-        sourceType: 'module',
       },
     },
+    plugins: {
+      react,
+      "react-hooks": reactHooks,
+      "jsx-a11y": jsxA11y,
+      prettier,
+    },
     rules: {
-      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+      ...react.configs.recommended.rules,
+      ...reactHooks.configs.recommended.rules,
+      ...jsxA11y.configs.recommended.rules,
+      "prettier/prettier": "warn",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
+    },
+    settings: {
+      react: { version: "detect" },
     },
   },
-])
+
+  // 5. Prettier last
+  prettierConfig,
+];
