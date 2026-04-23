@@ -106,8 +106,6 @@ Then open the local URL shown in the terminal to view the component in the brows
 
 ![AAccess](./screenshots/AfterAccessibility.png)
 
-These visuals help clients instantly understand the value you provide.
-
 ---
 
 ## 💡 Why This Project Matters
